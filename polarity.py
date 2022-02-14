@@ -1,8 +1,11 @@
 import csv
 from datetime import datetime
+from os.path import exists
 from tkinter import *
+import tkinter.ttk as ttk
 
 database = '2022.csv'
+header = ['datetime','color','manic','depressive','overwhelmed','apathetic','happy','sad','irritable','calm','empty','fulfilled']
 
 class Window:
     def __init__(self, master):
@@ -36,13 +39,16 @@ class Window:
         # Frames
         self.frame = Frame(self.master, width = 300, height = 300)
         self.frame.pack( padx = 10, pady = 10, side = LEFT)
+
         self.colorframe = Frame(self.frame, width = 200, height = 100)
         self.colorframe.grid(row = 1, column = 0, padx = 10, pady = 10)
         self.moodframe = Frame(self.frame, width = 200, height = 200)
         self.moodframe.grid(row = 2, column = 0, padx = 10, pady = 10)
 
+
         # Label
         self.label = Label(self.frame, text="  What color is your mood?  ", font = "Helvetica 16 italic", relief=GROOVE)
+        self.label.configure(bg='#808080')
         self.label.grid(row=0, column=0,  padx = 10, pady = 10)
 
         # Radios/Colors
@@ -66,12 +72,19 @@ class Window:
         Checkbutton(self.moodframe, text="fulfilled", variable=self.fulfilled).grid(row = 3, column = 4, padx = 5, pady = 5)
         Checkbutton(self.moodframe, text="empty", variable=self.empty).grid(row = 3, column = 5, padx = 5, pady = 5)
 
-
         # Submit
         self.Button = Button(self.frame, text = "Submit", command = submit).grid(row = 4, column = 0, sticky = E,  padx = 5, pady = 5)
 
 
+
 def main():
+    # Initialization routine if file is not found
+    if not exists(database):
+        new_file = open(database, 'w')
+        new_database = csv.writer(new_file)
+        new_database.writerow(header)
+        new_file.close()
+    # Open app
     root = Tk()
     root.title("Polarity")
     window = Window(root)
