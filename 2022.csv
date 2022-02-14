@@ -1,1 +1,2 @@
-datetime,color,manic,depressive,overwhelmed,apathetic,happy,sad,irritable,calm,ecstatic,empty
+datetime,color,manic,depressive,overwhelmed,apathetic,happy,sad,irritable,calm,empty,fulfilled
+02/13/2022 20:37,green,True,False,False,False,False,False,True,False,False,True
