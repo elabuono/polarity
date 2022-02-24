@@ -1,4 +1,7 @@
-
+import csv
+from datetime import datetime
+from os.path import exists
+from tkinter import *
 
 
 database = '2022.csv'
@@ -21,8 +24,8 @@ class Window:
 
         # Store data
         def submit():
-            with open(database, 'a') as csvfile:
-                csvwriter = csv.writer(csvfile)
+            with open(database, 'a', newline='') as csvfile:
+                csvwriter = csv.writer(csvfile, lineterminator='\n')
                 row = [datetime.now().strftime("%m/%d/%Y %H:%M"),
                         self.color.get(), self.manic.get(),
                         self.depressive.get(), self.overwhelmed.get(),

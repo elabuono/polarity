@@ -1,5 +1,7 @@
 datetime,color,manic,depressive,overwhelmed,apathetic,happy,sad,irritable,calm,empty,fulfilled
-02/13/2022 20:37,green,True,False,False,False,False,False,True,False,False,True
-02/14/2022 08:50,blue,False,True,False,True,False,True,False,False,True,False
-02/15/2022 11:37,yellow,False,False,False,False,True,False,False,True,False,True
-02/17/2022 10:51,green,False,False,False,False,True,False,True,False,False,True
+01/13/2022 20:37,green,True,False,False,False,False,False,True,False,False,True
+01/14/2022 08:50,blue,False,True,False,True,False,True,False,False,True,False
+02/15/2022 11:37,yellow,False,False,False,False,True,False,False,True,False,True
+02/17/2022 10:51,green,False,False,False,False,True,False,True,False,False,True
+02/24/2022 10:26,orange,True,False,False,False,False,True,False,False,True,False
+02/24/2022 10:27,red,True,False,False,False,False,True,False,False,True,False
