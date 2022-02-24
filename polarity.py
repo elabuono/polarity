@@ -1,7 +1,5 @@
-import csv
-from datetime import datetime
-from os.path import exists
-from tkinter import *
+
+
 
 database = '2022.csv'
 header = ['datetime','color','manic','depressive','overwhelmed','apathetic','happy','sad','irritable','calm','empty','fulfilled']
